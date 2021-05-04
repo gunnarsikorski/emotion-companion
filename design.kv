@@ -26,11 +26,14 @@
         Label:
             text: 'Start the good vibes here'
         TextInput:
+            id: username
             hint_text: 'Username'
         TextInput:
+            id: password
             hint_text: 'Password'
         Button:
             text: 'Submit'
+            on_press: root.add_user(root.ids.username.text, root.ids.password.text)
 
 
 <RootWidget>:
