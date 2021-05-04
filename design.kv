@@ -17,8 +17,24 @@
                 text: 'Forgot Password?'
             Button:
                 text: 'Sign Up Here'
+                on_press: root.sign_up()
+
+
+<SignUpScreen>:
+    GridLayout:
+        cols: 1
+        Label:
+            text: 'Start the good vibes here'
+        TextInput:
+            hint_text: 'Username'
+        TextInput:
+            hint_text: 'Password'
+        Button:
+            text: 'Submit'
+
 
 <RootWidget>:
     LoginScreen:
         name: 'login_screen'
-    
+    SignUpScreen:
+        name: 'sign_up_screen'
