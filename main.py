@@ -5,6 +5,9 @@ import json, glob
 import random
 from datetime import datetime
 from pathlib import Path
+from hoverable import HoverBehavior
+from kivy.uix.image import Image
+from kivy.uix.behaviors import ButtonBehavior
 
 Builder.load_file('./design.kv')
 
@@ -56,6 +59,9 @@ class LoginSuccess(Screen):
             self.ids.quote.text = random.choice(quotes)
         else:
             self.ids.quote.text = 'Try typing another emotion'
+
+class ImageButton(ButtonBehavior, HoverBehavior, Image):
+    pass
 
 class MainApp(App):
     def build(self):

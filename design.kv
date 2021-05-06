@@ -79,11 +79,16 @@
 <LoginSuccess>:
     GridLayout:
         cols: 1
-        Button:
-            text: 'Logout'
-            on_press: 
-                root.logout()
-                root.manager.transition.direction = 'right'
+        padding: 30, 30
+        spacing: 30, 30
+        RelativeLayout:
+            ImageButton:
+                on_press: 
+                    root.logout()
+                    root.manager.transition.direction = 'right'
+                source: './assets/logout_hover.png' if self.hovered else './assets/logout_nothover.png'
+                size_hint: 0.3, 0.3
+                pos_hint: {'center_x': 0.93, 'center_y': 0.8}
         Label:
             text: 'How are you feeling?'
         TextInput:
