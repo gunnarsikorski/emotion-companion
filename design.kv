@@ -71,11 +71,17 @@
         cols: 1
         Label:
             text: 'Sign up successful!'
-        Button:
-            text: 'Back to login'
-            on_press: 
-                root.back_to_login()
-                root.manager.transition.direction = 'right'
+            font_size: '35sp'
+        RelativeLayout:
+            Button:
+                text: 'Back to login'
+                on_press: 
+                    root.back_to_login()
+                    root.manager.transition.direction = 'right'
+                background_color: 1, 1, 1, 0
+                color: 0.1, 0.7, 1, 1
+                opacity: 1 if self.state == 'normal' else 0.5
+            
 
 <LoginSuccess>:
     GridLayout:
